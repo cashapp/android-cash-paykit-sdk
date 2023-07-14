@@ -18,6 +18,7 @@ package app.cash.paykit.core.ui
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.ImageButton
+import app.cash.paykit.core.R
 
 /**
  * Cash App Pay button. Should be used in conjunction with either `CAPButtonStyle.Light` or `CAPButtonStyle.Dark` styles.
@@ -31,7 +32,7 @@ class CashAppPayButton @JvmOverloads constructor(context: Context, attrs: Attrib
     context,
     attrs,
     0,
-    style,
+    R.style.CAPButtonStyle_Dark
   ) {
 
   override fun setEnabled(enabled: Boolean) {

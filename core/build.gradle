@@ -4,6 +4,7 @@ plugins {
   id("com.google.devtools.ksp").version("1.6.21-1.0.5")
   id 'project-report' // run ./gradlew htmlDependencyReport
   id "com.vanniktech.maven.publish.base"
+  id 'app.cash.paparazzi' version '1.0.0'
 }
 
 task sourceJar(type: Jar) {
