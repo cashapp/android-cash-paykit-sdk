@@ -13,5 +13,5 @@ dependencyResolutionManagement {
   }
 }
 rootProject.name = "Pay Kit SDK"
-include ':core'
-include ':analytics-core'
+include(":core")
+include(":analytics-core")
