@@ -76,6 +76,8 @@ internal class NetworkManagerImpl(
 
   var analyticsEventDispatcher: PayKitAnalyticsEventDispatcher? = null
 
+
+  // why does this throw?? shouldn't we just error?
   @Throws(IOException::class)
   override fun createCustomerRequest(
     clientId: String,
@@ -91,6 +93,7 @@ internal class NetworkManagerImpl(
     // Record analytics.
     analyticsEventDispatcher?.createdCustomerRequest(paymentActions, customerRequestData.actions, redirectUri)
 
+    // TODO wrap this in a try catch? so we can return NetworkResult.failure?
     return executeNetworkRequest(
       POST,
       CREATE_CUSTOMER_REQUEST_ENDPOINT,

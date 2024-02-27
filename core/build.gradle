@@ -83,6 +83,8 @@ dependencies {
   //noinspection GradleDependency
   implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
 
+  implementation("io.github.nsk90:kstatemachine-jvm:0.24.1")
+
   implementation project(':logging')
   implementation project(':analytics-core')
 

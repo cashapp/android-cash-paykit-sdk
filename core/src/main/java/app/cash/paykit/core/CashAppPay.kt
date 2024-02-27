@@ -101,6 +101,7 @@ interface CashAppPay {
    * @param requestId ID of the request we intent do retrieve.
    */
   @WorkerThread
+  // TODO should we throw here as well?
   fun startWithExistingCustomerRequest(
     requestId: String,
   )
@@ -194,7 +195,7 @@ object CashAppPayFactory {
       analyticsEventDispatcher = analyticsEventDispatcher,
       payKitLifecycleListener = cashAppPayLifecycleObserver,
       useSandboxEnvironment = false,
-      logger = cashAppPayLogger,
+//      logger = cashAppPayLogger,
     )
   }
 
@@ -222,7 +223,7 @@ object CashAppPayFactory {
       analyticsEventDispatcher = analyticsEventDispatcher,
       payKitLifecycleListener = cashAppPayLifecycleObserver,
       useSandboxEnvironment = true,
-      logger = cashAppPayLogger,
+//      logger = cashAppPayLogger,
     )
   }
 
